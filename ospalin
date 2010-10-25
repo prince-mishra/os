@@ -1,0 +1,10 @@
+#! /bin/bash
+str=$(echo $1|rev)
+echo "you passed $1"
+echo "When reversed, we get $str"
+if [ "$1" = "$str" ]
+then
+   echo "It is a palindrome"
+else
+   echo "It is not a palindrome"
+fi

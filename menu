@@ -1,0 +1,25 @@
+#!/bin/bash
+while :
+do
+echo "MAIN MENU"
+echo "1. contents of /etc/passwd"
+echo "2. logged users"
+echo "3. present working directory"
+echo "4. exit"
+read choice
+if [ "$choice" = "1" ]
+then
+	cat /etc/passwd
+elif [ "$choice" = "2" ]
+then
+	echo $(who)
+elif [ "$choice" = "3" ]
+then
+	echo $(pwd)
+elif [ "$choice" = "4" ]
+then
+	exit 1
+else
+	echo "Wrong Choice (pick between 1-4)"
+fi
+done
